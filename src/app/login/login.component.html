@@ -1,0 +1,24 @@
+<div class="col-xs-12">
+  <form #userForm="ngForm">
+    <div class="form-group">
+      <label for="username">Name</label>
+      <input type="text" class="form-control" id="username" [(ngModel)]="user.username" name="name_input">
+    </div>
+    <div class="form-group">
+      <label for="street">Street</label>
+      <input type="text" class="form-control" id="street" [(ngModel)]="user.street" name="street_input">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" id="email" [(ngModel)]="user.email" name="email_input">
+    </div>
+    <div class="form-group">
+      <label for="password">PassWord</label>
+      <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="post_password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <hr>
+  <h4>Form Data</h4>
+  <p> {{ userForm.value | json }} </p>
+</div>
